@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablas HTML</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 30px;
+            background: white;
+        }
+
+        p {
+            margin-bottom: 20px;
+        }
+
+        /* ===== TABLA 1: NOTAS ===== */
+        table.notas {
+            border-collapse: collapse;
+            margin-bottom: 40px;
+        }
+
+        table.notas td, table.notas th {
+            border: 2px solid black;
+            padding: 10px 30px;
+            text-align: center;
+        }
+
+        table.notas thead tr th {
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        table.notas tfoot tr td {
+            font-weight: bold;
+        }
+
+        /* ===== TABLA 2: LOGOS ===== */
+        table.logos {
+            border-collapse: collapse;
+            margin-bottom: 40px;
+        }
+
+        table.logos td {
+            border: 2px solid #aaa;
+            padding: 10px 20px;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        table.logos td.caption {
+            font-size: 0.8em;
+            padding: 4px 10px;
+            border-top: 1px solid #aaa;
+        }
+
+        .amazon-logo {
+            font-family: 'Times New Roman', serif;
+            font-size: 1.4em;
+            font-weight: bold;
+            color: black;
+            display: block;
+        }
+
+        .amazon-arrow {
+            color: #FF9900;
+            font-size: 1.2em;
+            display: block;
+            margin-top: -4px;
+            letter-spacing: -2px;
+        }
+
+        .amazon-com {
+            font-size: 0.75em;
+            font-weight: normal;
+            vertical-align: super;
+        }
+
+        .youtube-logo {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-family: Arial, sans-serif;
+            font-size: 1.3em;
+            font-weight: bold;
+        }
+
+        .youtube-icon {
+            background-color: #FF0000;
+            color: white;
+            border-radius: 5px;
+            padding: 2px 7px;
+            font-size: 0.9em;
+        }
+
+        /* ===== TABLA 3: TURISMO ===== */
+        table.turismo {
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        table.turismo td {
+            border: 1px solid #999;
+            vertical-align: top;
+            padding: 0;
+        }
+
+        td.categoria {
+            width: 85px;
+            vertical-align: middle;
+            text-align: center;
+            padding: 8px 5px;
+        }
+
+        td.categoria a {
+            color: purple;
+            text-decoration: underline;
+            font-size: 0.88em;
+            font-family: Arial, sans-serif;
+        }
+
+        td.items {
+            width: 175px;
+            vertical-align: top;
+            padding: 0;
+        }
+
+        td.items div {
+            padding: 7px 10px;
+            border-bottom: 1px solid #ccc;
+            font-size: 0.85em;
+            font-family: Arial, sans-serif;
+        }
+
+        td.items div:last-child {
+            border-bottom: none;
+        }
+
+        td.foto {
+            width: 230px;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        td.foto img {
+            width: 230px;
+            display: block;
+            object-fit: cover;
+        }
+
+        td.foto img.img-top {
+            height: 128px;
+            border-bottom: 1px solid #999;
+        }
+
+        td.foto img.img-bottom {
+            height: 128px;
+        }
+
+        td.foto img.img-full {
+            height: 100%;
+            min-height: 120px;
+        }
+    </style>
+</head>
+<body>
+
+    <p>Genere un código en HTML para mostrar las siguientes Tablas (inserte datos), en una sola hoja web:</p>
+
+    <!-- ===== TABLA 1: ALUMNOS Y NOTAS ===== -->
+    <table class="notas">
+        <thead>
+            <tr>
+                <th>ALUMNO</th>
+                <th>NOTA</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Pepe</td>
+                <td>7,65</td>
+            </tr>
+            <tr>
+                <td>María</td>
+                <td>8,54</td>
+            </tr>
+            <tr>
+                <td>Jordi</td>
+                <td>5,55</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>MEDIA</td>
+                <td>7,25</td>
+            </tr>
+            <tr>
+                <td>DESV. TÍPICA</td>
+                <td>7,35</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <!-- ===== TABLA 2: LOGOS ===== -->
+    <table class="logos">
+        <tbody>
+            <tr>
+                <td>
+                    <span class="amazon-logo">amazon<span class="amazon-com">.com</span></span>
+                    <span class="amazon-arrow">&#x2935;&#x2935;&#x2935;&#x2935;&#x2935;</span>
+                </td>
+                <td>
+                    <span class="youtube-logo">
+                        <span class="youtube-icon">&#9654;</span>
+                        YouTube
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="caption">Arriba está Amazon</td>
+                <td class="caption">Arriba está Youtube</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- ===== TABLA 3: TURISMO (GASTRONOMÍA, CULTURA, OCIO) ===== -->
+    <table class="turismo">
+
+        <!-- ——— FILA: GASTRONOMÍA ——— -->
+        <tr>
+            <td class="categoria" rowspan="5">
+                <a href="#">Gastronomía</a>
+            </td>
+            <td class="items">
+                <div>Restaurantes</div>
+                <div>Sidrerías y asadores</div>
+                <div>Bodegas de vino y txakoli</div>
+                <div>Productos típicos</div>
+                <div>Escuelas de hostelería</div>
+            </td>
+            <td class="foto" rowspan="5">
+                <!--
+                  Imagen superior: platos variados con hierbas (similar a la imagen original)
+                  Fuente: Unsplash - libre de derechos
+                -->
+                <img class="img-top"
+                    src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=320&h=128&fit=crop&auto=format"
+                    alt="Platos variados de restaurante">
+                <!--
+                  Imagen inferior: marisco y paella (similar a la imagen original)
+                  Fuente: Unsplash - libre de derechos
+                -->
+                <img class="img-bottom"
+                    src="https://images.unsplash.com/photo-1534080564583-6be75777b70a?w=320&h=128&fit=crop&auto=format"
+                    alt="Paella con mariscos">
+            </td>
+        </tr>
+
+        <!-- ——— FILA: CULTURA ——— -->
+        <tr>
+            <td class="categoria" rowspan="4">
+                <a href="#">Cultura</a>
+            </td>
+            <td class="items">
+                <div>archivos y bibliotecas</div>
+                <div>museos</div>
+                <div>palacios de congresos</div>
+                <div>ferias de muestras</div>
+            </td>
+            <td class="foto" rowspan="4">
+                <!--
+                  Imagen: edificio moderno junto al mar (similar al museo Guggenheim de la imagen)
+                  Fuente: Unsplash - libre de derechos
+                -->
+                <img class="img-full"
+                    src="https://images.unsplash.com/photo-1555993539-1732b0258235?w=320&h=150&fit=crop&auto=format"
+                    alt="Edificio moderno museo">
+            </td>
+        </tr>
+
+        <!-- ——— FILA: OCIO ——— -->
+        <tr>
+            <td class="categoria" rowspan="3">
+                <a href="#">Ocio</a>
+            </td>
+            <td class="items">
+                <div>Entretenimiento y diversión</div>
+                <div>Ocio cultural</div>
+                <div>Excursiones y deporte</div>
+            </td>
+            <td class="foto" rowspan="3">
+                <!--
+                  Imagen: costa con rocas y mar (igual a la imagen original)
+                  Fuente: Unsplash - libre de derechos
+                -->
+                <img class="img-full"
+                    src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=320&h=140&fit=crop&auto=format"
+                    alt="Costa rocosa y mar">
+            </td>
+        </tr>
+
+    </table>
+
+    <!-- ===== TABLA 4: JUGADORES DE FÚTBOL DE LEYENDA (dentro de una celda) ===== -->
+    <p style="margin-top:40px; background-color:#FFFF00; display:inline-block; padding:2px 6px; font-size:0.85em;">
+        Coloque esta información dentro de una celda:
+    </p>
+
+    <table style="border-collapse: collapse; margin-top: 8px;">
+        <tr>
+            <td style="border: 3px solid black; padding: 24px 36px; font-family: Arial, sans-serif;">
+
+                <h1 style="font-family: 'Times New Roman', serif; font-size: 2em; font-weight: 900; margin: 0 0 20px 0;">
+                    Jugadores de fútbol de leyenda
+                </h1>
+
+                <ul style="list-style-type: disc; padding-left: 20px; margin: 0; font-size: 1em; font-weight: bold;">
+
+                    <!-- España -->
+                    <li style="margin-bottom: 6px;">España
+                        <ul style="list-style-type: square; padding-left: 22px; font-weight: bold;">
+                            <li>Casillas</li>
+                            <li>Xavi</li>
+                            <li>Iniesta</li>
+                        </ul>
+                    </li>
+
+                    <!-- Francia -->
+                    <li style="margin-bottom: 6px;">Francia
+                        <ul style="list-style-type: disc; padding-left: 22px; font-weight: bold;">
+                            <li>Zidane</li>
+                            <li>Henry</li>
+                            <li>Barthez</li>
+                        </ul>
+                    </li>
+
+                    <!-- Brasil -->
+                    <li>Brasil
+                        <ul style="list-style-type: circle; padding-left: 22px; font-weight: bold;">
+                            <li>Ronaldo</li>
+                            <li>Pelé</li>
+                            <li>Ronaldinho</li>
+                        </ul>
+                    </li>
+
+                </ul>
+
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>
