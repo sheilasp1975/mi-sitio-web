@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portales Web – Diseño de Páginas Web</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg: #0a0a0f;
+      --surface: #12121a;
+      --border: rgba(255,255,255,0.07);
+      --text: #f0f0f5;
+      --muted: rgba(240,240,245,0.45);
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* ── FONDO ANIMADO ── */
+    .bg-grid {
+      position: fixed; inset: 0; z-index: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+      background-size: 48px 48px;
+      pointer-events: none;
+    }
+    .bg-glow {
+      position: fixed; z-index: 0; pointer-events: none;
+      border-radius: 50%; filter: blur(100px); opacity: 0.18;
+    }
+    .glow-1 { width: 500px; height: 500px; background: #3949ab; top: -100px; left: -100px; }
+    .glow-2 { width: 400px; height: 400px; background: #2d6a4f; bottom: -80px; right: -80px; }
+    .glow-3 { width: 300px; height: 300px; background: #8b5635; top: 50%; left: 50%; transform: translate(-50%,-50%); }
+
+    /* ── CONTENIDO ── */
+    .wrapper { position: relative; z-index: 1; max-width: 960px; margin: 0 auto; padding: 60px 24px 80px; }
+
+    /* HEADER */
+    .header { text-align: center; margin-bottom: 64px; }
+    .header .eyebrow {
+      display: inline-block;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      padding: 6px 18px;
+      border-radius: 100px;
+      margin-bottom: 20px;
+    }
+    .header h1 {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(32px, 6vw, 54px);
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -1px;
+      background: linear-gradient(135deg, #fff 30%, rgba(255,255,255,0.45));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 16px;
+    }
+    .header p {
+      font-size: 16px;
+      color: var(--muted);
+      max-width: 480px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    /* CARDS */
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      overflow: hidden;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s;
+      position: relative;
+    }
+    .card:hover {
+      transform: translateY(-6px);
+      border-color: var(--accent);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.5), 0 0 0 1px var(--accent);
+    }
+    .card::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(circle at 50% 0%, var(--accent-soft) 0%, transparent 65%);
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.25s;
+    }
+    .card:hover::before { opacity: 1; }
+
+    .card-banner {
+      height: 140px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 64px;
+      position: relative;
+    }
+    .card-banner::after {
+      content: '';
+      position: absolute; bottom: 0; left: 0; right: 0; height: 40px;
+      background: linear-gradient(to bottom, transparent, var(--surface));
+    }
+
+    .card-body { padding: 22px 24px 26px; flex: 1; display: flex; flex-direction: column; }
+    .card-num {
+      font-family: 'Syne', sans-serif;
+      font-size: 11px; letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+    .card-body h2 {
+      font-family: 'Syne', sans-serif;
+      font-size: 20px; font-weight: 700;
+      margin-bottom: 10px;
+      color: #fff;
+    }
+    .card-body p { font-size: 13.5px; color: var(--muted); line-height: 1.65; flex: 1; }
+
+    .card-pages { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 18px; }
+    .page-tag {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid var(--border);
+      color: rgba(255,255,255,0.5);
+      font-size: 11px; padding: 3px 10px; border-radius: 100px;
+    }
+
+    .card-cta {
+      display: flex; align-items: center; gap: 8px;
+      margin-top: 20px;
+      color: var(--accent);
+      font-size: 13px; font-weight: 500;
+      font-family: 'Syne', sans-serif;
+      letter-spacing: 0.5px;
+    }
+    .card-cta .arrow {
+      width: 28px; height: 28px;
+      background: var(--accent);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 13px;
+      color: white;
+      transition: transform 0.2s;
+    }
+    .card:hover .arrow { transform: translateX(4px); }
+
+    /* PORTAL COLORS */
+    .p1 {
+      --accent: #6c7ee1;
+      --accent-soft: rgba(108,126,225,0.1);
+    }
+    .p1 .card-banner { background: linear-gradient(135deg, #1a237e22, #3949ab22); }
+
+    .p2 {
+      --accent: #52b788;
+      --accent-soft: rgba(82,183,136,0.1);
+    }
+    .p2 .card-banner { background: linear-gradient(135deg, #1b433222, #40916c22); }
+
+    .p3 {
+      --accent: #e0a96d;
+      --accent-soft: rgba(224,169,109,0.1);
+    }
+    .p3 .card-banner { background: linear-gradient(135deg, #3d1c0222, #8b563522); }
+
+    /* FOOTER */
+    .footer {
+      text-align: center;
+      margin-top: 70px;
+      padding-top: 30px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .footer strong { color: rgba(255,255,255,0.6); }
+
+    /* INSTRUCCIONES */
+    .instrucciones {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px 32px;
+      margin-bottom: 48px;
+      display: flex; gap: 20px; align-items: flex-start;
+    }
+    .instrucciones .ico { font-size: 28px; flex-shrink: 0; margin-top: 2px; }
+    .instrucciones h3 { font-family: 'Syne', sans-serif; font-size: 14px; color: #fff; margin-bottom: 8px; letter-spacing: 0.3px; }
+    .instrucciones ol { padding-left: 18px; color: var(--muted); font-size: 13.5px; line-height: 2; }
+    .instrucciones code { background: rgba(255,255,255,0.08); padding: 1px 8px; border-radius: 5px; color: #a5b4fc; font-size: 12px; }
+  </style>
+</head>
+<body>
+  <div class="bg-grid"></div>
+  <div class="bg-glow glow-1"></div>
+  <div class="bg-glow glow-2"></div>
+  <div class="bg-glow glow-3"></div>
+
+  <div class="wrapper">
+
+    <!-- HEADER -->
+    <div class="header">
+      <div class="eyebrow">Diseño de Páginas Web y Portales Educativos</div>
+      <h1>Portales Web<br>con Tablas e iFrames</h1>
+      <p>Tres proyectos prácticos que demuestran el uso de tablas HTML como maquetación, menús laterales y navegación con iframes.</p>
+    </div>
+
+    <!-- INSTRUCCIONES -->
+    <div class="instrucciones">
+      <div class="ico">📋</div>
+      <div>
+        <h3>¿Cómo navegar cada portal?</h3>
+        <ol>
+          <li>Haz clic en uno de los portales de abajo</li>
+          <li>Se abrirá el <code>index.html</code> del portal correspondiente</li>
+          <li>Usa el menú lateral para navegar entre secciones</li>
+          <li>Cada sección se carga dentro del <code>&lt;iframe&gt;</code> de la derecha</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- CARDS -->
+    <div class="cards">
+
+      <a href="portal1_escolar/index.html" class="card p1">
+        <div class="card-banner">🏫</div>
+        <div class="card-body">
+          <div class="card-num">Ejercicio 01</div>
+          <h2>Portal Escolar</h2>
+          <p>Portal institucional con menú lateral y sección de noticias. Usa tabla de dos columnas con iframe de contenido.</p>
+          <div class="card-pages">
+            <span class="page-tag">🏠 Inicio</span>
+            <span class="page-tag">📚 Cursos</span>
+            <span class="page-tag">📰 Noticias</span>
+            <span class="page-tag">✉️ Contacto</span>
+          </div>
+          <div class="card-cta">
+            <span class="arrow">→</span> Abrir portal
+          </div>
+        </div>
+      </a>
+
+      <a href="portal2_turistico/index.html" class="card p2">
+        <div class="card-banner">🌿</div>
+        <div class="card-body">
+          <div class="card-num">Ejercicio 02</div>
+          <h2>Portal Turístico</h2>
+          <p>Sitio turístico de La Libertad con galería y secciones internas. Íconos en el menú y fotos por destino.</p>
+          <div class="card-pages">
+            <span class="page-tag">🏖️ Playas</span>
+            <span class="page-tag">🗺️ Rutas</span>
+            <span class="page-tag">🏨 Hoteles</span>
+            <span class="page-tag">🍽️ Gastronomía</span>
+          </div>
+          <div class="card-cta">
+            <span class="arrow">→</span> Abrir portal
+          </div>
+        </div>
+      </a>
+
+      <a href="portal3_cultural/index.html" class="card p3">
+        <div class="card-banner">🏺</div>
+        <div class="card-body">
+          <div class="card-num">Ejercicio 03</div>
+          <h2>Portal Cultural</h2>
+          <p>Portal del patrimonio cultural liberteño con categorías y contenido dinámico cargado en iframe.</p>
+          <div class="card-pages">
+            <span class="page-tag">📜 Historia</span>
+            <span class="page-tag">🏛️ Museos</span>
+            <span class="page-tag">🎭 Festivales</span>
+            <span class="page-tag">🪡 Artesanía</span>
+          </div>
+          <div class="card-cta">
+            <span class="arrow">→</span> Abrir portal
+          </div>
+        </div>
+      </a>
+
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+      <p>Curso <strong>Diseño de Páginas Web y Portales Educativos</strong> &nbsp;·&nbsp; Trujillo, La Libertad, Perú &nbsp;·&nbsp; 2025</p>
+    </div>
+
+  </div>
+</body>
+</html>
