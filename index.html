@@ -3,159 +3,83 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>IE República de Panamá – Portal Escolar</title>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <title>La Libertad Turística – Portal de Turismo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600;700&family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: 'Nunito', sans-serif;
-      background: #f0f4ff;
-      min-height: 100vh;
-    }
-    .wrapper {
-      display: flex;
-      height: 100vh;
-      overflow: hidden;
-    }
+    body { font-family: 'Josefin Sans', sans-serif; background: #fff8f0; min-height: 100vh; }
+    .wrapper { display: flex; height: 100vh; overflow: hidden; }
+
     /* ── SIDEBAR ── */
     .sidebar {
-      width: 230px;
-      min-width: 230px;
-      background: linear-gradient(170deg, #1a237e 0%, #283593 60%, #3949ab 100%);
-      display: flex;
-      flex-direction: column;
-      padding: 0;
-      box-shadow: 4px 0 20px rgba(26,35,126,0.18);
-      position: relative;
-      z-index: 10;
+      width: 220px; min-width: 220px;
+      background: linear-gradient(180deg, #1b4332 0%, #2d6a4f 50%, #40916c 100%);
+      display: flex; flex-direction: column;
+      box-shadow: 4px 0 24px rgba(27,67,50,0.25);
+      position: relative; z-index: 10;
     }
     .sidebar-header {
-      padding: 28px 20px 18px;
-      text-align: center;
-      border-bottom: 1px solid rgba(255,255,255,0.12);
+      padding: 30px 20px 20px; text-align: center;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
     }
-    .school-icon {
-      font-size: 42px;
-      display: block;
-      margin-bottom: 6px;
-    }
+    .logo-icon { font-size: 46px; display: block; margin-bottom: 6px; }
     .sidebar-title {
-      font-family: 'Playfair Display', serif;
-      color: #fff;
-      font-size: 14px;
-      line-height: 1.3;
-      letter-spacing: 0.3px;
+      font-family: 'Cormorant Garamond', serif;
+      color: #fff; font-size: 17px; line-height: 1.3; font-weight: 700;
     }
-    .sidebar-sub {
-      color: #90caf9;
-      font-size: 10px;
-      margin-top: 4px;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-    }
-    .nav {
-      padding: 20px 14px;
-      flex: 1;
-    }
-    .nav-label {
-      color: rgba(255,255,255,0.4);
-      font-size: 10px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      margin: 16px 8px 8px;
-    }
+    .sidebar-sub { color: #95d5b2; font-size: 10px; letter-spacing: 2px; margin-top: 4px; text-transform: uppercase; }
+    .nav { padding: 18px 12px; flex: 1; }
+    .nav-label { color: rgba(255,255,255,0.35); font-size: 10px; letter-spacing: 2px; text-transform: uppercase; margin: 14px 8px 8px; }
     .nav a {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      color: rgba(255,255,255,0.88);
-      text-decoration: none;
-      font-size: 14.5px;
-      font-weight: 600;
-      padding: 11px 14px;
-      border-radius: 10px;
-      margin-bottom: 4px;
+      display: flex; align-items: center; gap: 12px;
+      color: rgba(255,255,255,0.9); text-decoration: none;
+      font-size: 14px; font-weight: 600; letter-spacing: 0.5px;
+      padding: 11px 13px; border-radius: 10px; margin-bottom: 3px;
       transition: all 0.2s;
     }
-    .nav a:hover {
-      background: rgba(255,255,255,0.14);
-      color: #fff;
-      transform: translateX(3px);
-    }
-    .nav a .icon { font-size: 18px; width: 24px; text-align: center; }
+    .nav a:hover { background: rgba(255,255,255,0.14); color: #fff; transform: translateX(4px); }
+    .nav a .icon { font-size: 20px; width: 26px; text-align: center; }
     .sidebar-footer {
-      padding: 16px 20px;
-      border-top: 1px solid rgba(255,255,255,0.1);
-      color: rgba(255,255,255,0.4);
-      font-size: 11px;
-      text-align: center;
+      padding: 14px 18px; border-top: 1px solid rgba(255,255,255,0.1);
+      color: rgba(255,255,255,0.35); font-size: 11px; text-align: center;
     }
+
     /* ── CONTENT ── */
-    .content {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      overflow: hidden;
-    }
+    .content { flex: 1; display: flex; flex-direction: column; overflow: hidden; }
     .top-bar {
-      background: #fff;
+      background: linear-gradient(90deg, #1b4332, #2d6a4f);
       padding: 14px 28px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      display: flex; align-items: center; justify-content: space-between;
+      box-shadow: 0 2px 12px rgba(27,67,50,0.2);
     }
-    .top-bar h1 {
-      font-size: 18px;
-      color: #1a237e;
-      font-weight: 800;
-    }
-    .top-bar .badge {
-      background: #e8eaf6;
-      color: #3949ab;
-      padding: 5px 14px;
-      border-radius: 20px;
-      font-size: 12px;
-      font-weight: 700;
-    }
-    iframe {
-      flex: 1;
-      border: none;
-      background: #f0f4ff;
-    }
+    .top-bar h1 { font-size: 17px; color: #fff; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; }
+    .top-bar .badge { background: rgba(255,255,255,0.15); color: #95d5b2; padding: 5px 14px; border-radius: 20px; font-size: 12px; font-weight: 600; letter-spacing: 1px; }
+    iframe { flex: 1; border: none; background: #fff8f0; }
   </style>
 </head>
 <body>
   <div class="wrapper">
     <aside class="sidebar">
       <div class="sidebar-header">
-        <span class="school-icon">🏫</span>
-        <div class="sidebar-title">IE República de Panamá</div>
-        <div class="sidebar-sub">Portal Escolar</div>
+        <span class="logo-icon">🌿</span>
+        <div class="sidebar-title">La Libertad Turística</div>
+        <div class="sidebar-sub">Portal Turístico</div>
       </div>
       <nav class="nav">
-        <div class="nav-label">Menú Principal</div>
-        <a href="inicio.html" target="contenido">
-          <span class="icon">🏠</span> Inicio
-        </a>
-        <a href="cursos.html" target="contenido">
-          <span class="icon">📚</span> Cursos
-        </a>
-        <a href="noticias.html" target="contenido">
-          <span class="icon">📰</span> Noticias
-        </a>
-        <a href="contacto.html" target="contenido">
-          <span class="icon">✉️</span> Contacto
-        </a>
+        <div class="nav-label">Destinos</div>
+        <a href="playas.html" target="contenido"><span class="icon">🏖️</span> Playas</a>
+        <a href="rutas.html" target="contenido"><span class="icon">🗺️</span> Rutas</a>
+        <a href="hoteles.html" target="contenido"><span class="icon">🏨</span> Hoteles</a>
+        <a href="gastronomia.html" target="contenido"><span class="icon">🍽️</span> Gastronomía</a>
       </nav>
-      <div class="sidebar-footer">© 2025 IE República de Panamá</div>
+      <div class="sidebar-footer">© 2025 La Libertad Turística</div>
     </aside>
     <div class="content">
       <div class="top-bar">
-        <h1>Portal Escolar Digital</h1>
-        <span class="badge">Trujillo, La Libertad</span>
+        <h1>🌎 Descubre La Libertad</h1>
+        <span class="badge">Trujillo, Perú</span>
       </div>
-      <iframe name="contenido" src="inicio.html"></iframe>
+      <iframe name="contenido" src="playas.html"></iframe>
     </div>
   </div>
 </body>

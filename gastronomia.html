@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600;700&family=Cormorant+Garamond:wght@700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Josefin Sans', sans-serif; background: #fff8f0; padding: 32px; color: #222; }
+    .hero { background: linear-gradient(135deg, #e63946 0%, #f4a261 100%); border-radius: 18px; padding: 40px 32px; color: white; margin-bottom: 28px; text-align: center; }
+    .hero h1 { font-family: 'Cormorant Garamond', serif; font-size: 30px; margin-bottom: 8px; }
+    .hero p { font-size: 14px; color: #ffe8d6; }
+    .grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 16px; }
+    .plato { background: white; border-radius: 14px; padding: 20px; box-shadow: 0 2px 10px rgba(230,57,70,0.08); display: flex; gap: 16px; align-items: flex-start; border-left: 4px solid var(--ac); }
+    .plato .ico { font-size: 38px; }
+    .plato h3 { color: var(--ac); font-size: 15px; margin-bottom: 5px; }
+    .plato p { color: #555; font-size: 13px; line-height: 1.5; }
+    .plato .orig { font-size: 11px; color: #888; margin-top: 6px; font-style: italic; }
+  </style>
+</head>
+<body>
+  <div class="hero">
+    <h1>🍽️ Gastronomía Liberteña</h1>
+    <p>Sabores únicos que combinan tradición andina, criolla y costera del norte peruano</p>
+  </div>
+  <div class="grid">
+    <div class="plato" style="--ac:#0077b6"><div class="ico">🐟</div><div><h3>Ceviche Norteño</h3><p>Pescado marinado en limón con ají amarillo, cebolla morada y choclo. El sabor más representativo de la costa liberteña.</p><div class="orig">📍 Infaltable en Huanchaco y Salaverry</div></div></div>
+    <div class="plato" style="--ac:#2d6a4f"><div class="ico">🍲</div><div><h3>Shambar</h3><p>Sopa tradicional trujillana de trigo, jamón, menestras y hierbabuena. Se sirve los lunes. Patrimonio gastronómico regional.</p><div class="orig">📍 Plato típico de Trujillo</div></div></div>
+    <div class="plato" style="--ac:#e63946"><div class="ico">🫙</div><div><h3>Sopa Teóloga</h3><p>Espesa sopa de gallina con pan, huevo y especias. Plato festivo que se servía en las celebraciones religiosas coloniales.</p><div class="orig">📍 Tradición colonial liberteña</div></div></div>
+    <div class="plato" style="--ac:#f4a261"><div class="ico">🌽</div><div><h3>Pepián de Pava</h3><p>Guiso de pavita con maíz molido, ají panca y hierbas aromáticas. Sabor intenso y textura cremosa.</p><div class="orig">📍 Cocina tradicional andina-costera</div></div></div>
+    <div class="plato" style="--ac:#6d4c41"><div class="ico">🍺</div><div><h3>Ron de Chicama</h3><p>Aguardiente de caña elaborado en el valle de Chicama. El más famoso del Perú, con producción artesanal centenaria.</p><div class="orig">📍 Valle de Chicama, La Libertad</div></div></div>
+    <div class="plato" style="--ac:#1b4332"><div class="ico">🍮</div><div><h3>King Kong</h3><p>Dulce tradicional elaborado con manjar blanco, piña y maní entre galletas artesanales. Símbolo repostero de la región.</p><div class="orig">📍 Especialidad de Trujillo</div></div></div>
+  </div>
+</body>
+</html>

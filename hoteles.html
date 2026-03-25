@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600;700&family=Cormorant+Garamond:wght@700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Josefin Sans', sans-serif; background: #fff8f0; padding: 32px; color: #222; }
+    .hero { background: linear-gradient(135deg, #1b4332 0%, #40916c 100%); border-radius: 18px; padding: 40px 32px; color: white; margin-bottom: 28px; text-align: center; }
+    .hero h1 { font-family: 'Cormorant Garamond', serif; font-size: 30px; margin-bottom: 8px; }
+    .hero p { font-size: 14px; color: #95d5b2; }
+    .grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; }
+    .hotel { background: white; border-radius: 14px; padding: 20px; box-shadow: 0 2px 12px rgba(27,67,50,0.08); text-align: center; transition: transform 0.18s; }
+    .hotel:hover { transform: translateY(-3px); }
+    .hotel .ico { font-size: 40px; margin-bottom: 10px; }
+    .hotel h3 { color: #1b4332; font-size: 14px; margin-bottom: 6px; }
+    .estrellas { color: #f4a261; font-size: 16px; margin-bottom: 8px; }
+    .hotel p { color: #555; font-size: 12.5px; line-height: 1.5; }
+    .precio { display: inline-block; background: #d8f3dc; color: #1b4332; font-size: 11px; padding: 3px 10px; border-radius: 20px; margin-top: 8px; font-weight: 700; }
+  </style>
+</head>
+<body>
+  <div class="hero">
+    <h1>🏨 Hoteles Recomendados</h1>
+    <p>Alojamiento para todos los gustos en Trujillo y La Libertad</p>
+  </div>
+  <div class="grid">
+    <div class="hotel"><div class="ico">🏰</div><div class="estrellas">★★★★★</div><h3>Hotel Costa del Sol Wyndham</h3><p>Lujo en el corazón de Trujillo. Piscina, spa y restaurante gourmet con vista panorámica.</p><span class="precio">Desde S/. 380/noche</span></div>
+    <div class="hotel"><div class="ico">🏩</div><div class="estrellas">★★★★</div><h3>Hotel Libertador</h3><p>Elegante hotel colonial cerca de la Plaza Mayor. Desayuno incluido y servicio personalizado.</p><span class="precio">Desde S/. 220/noche</span></div>
+    <div class="hotel"><div class="ico">🏡</div><div class="estrellas">★★★★</div><h3>El Gran Marqués</h3><p>Arquitectura moderna con piscina y bar. Ubicación estratégica para turismo y negocios.</p><span class="precio">Desde S/. 180/noche</span></div>
+    <div class="hotel"><div class="ico">🌿</div><div class="estrellas">★★★</div><h3>Hotel Huanchaco Paradise</h3><p>A pasos de la playa. Perfecto para surfers y amantes del mar, ambiente relajado.</p><span class="precio">Desde S/. 120/noche</span></div>
+    <div class="hotel"><div class="ico">🏠</div><div class="estrellas">★★★</div><h3>Posada del Chimú</h3><p>Encantadora posada familiar con decoración precolombina. Céntrica y económica.</p><span class="precio">Desde S/. 90/noche</span></div>
+    <div class="hotel"><div class="ico">⛺</div><div class="estrellas">★★</div><h3>Hostal Trujillo Center</h3><p>Opción económica ideal para mochileros. Incluye WiFi y desayuno continental.</p><span class="precio">Desde S/. 55/noche</span></div>
+  </div>
+</body>
+</html>
