@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Nunito', sans-serif; background: #f0f4ff; padding: 36px; color: #222; }
+    h1 { color: #1a237e; font-size: 26px; font-weight: 800; margin-bottom: 24px; }
+    .noticia {
+      background: white; border-radius: 14px; padding: 22px 26px;
+      box-shadow: 0 2px 10px rgba(57,73,171,0.07);
+      margin-bottom: 18px;
+      display: flex; gap: 20px; align-items: flex-start;
+    }
+    .fecha {
+      background: #1a237e; color: white; border-radius: 10px;
+      padding: 10px 14px; text-align: center; min-width: 56px; flex-shrink: 0;
+    }
+    .fecha .day { font-size: 22px; font-weight: 800; line-height: 1; }
+    .fecha .month { font-size: 10px; text-transform: uppercase; letter-spacing: 1px; color: #c5cae9; }
+    .info h3 { color: #1a237e; font-size: 16px; margin-bottom: 6px; }
+    .info p { color: #555; font-size: 13px; line-height: 1.6; }
+    .tag { display: inline-block; font-size: 11px; padding: 2px 10px; border-radius: 20px; margin-top: 10px; font-weight: 700; }
+    .tag.logro { background: #e8f5e9; color: #2e7d32; }
+    .tag.evento { background: #e3f2fd; color: #1565c0; }
+    .tag.academico { background: #fff8e1; color: #f57f17; }
+  </style>
+</head>
+<body>
+  <h1>📰 Noticias Escolares</h1>
+  <div class="noticia">
+    <div class="fecha"><div class="day">18</div><div class="month">Jul</div></div>
+    <div class="info">
+      <h3>🏆 Camila Sierralta elegida Alcaldesa Escolar</h3>
+      <p>Nuestra estudiante de 5.° de secundaria fue elegida por votación democrática como Alcaldesa Escolar 2025, representando a toda la comunidad estudiantil de la institución.</p>
+      <span class="tag logro">Logro Estudiantil</span>
+    </div>
+  </div>
+  <div class="noticia">
+    <div class="fecha"><div class="day">10</div><div class="month">Jul</div></div>
+    <div class="info">
+      <h3>🚀 Participación en NASA "Ella es Astronauta"</h3>
+      <p>Estudiantes de la IE participaron en el programa internacional de la NASA, desarrollando habilidades en ciencia espacial y motivación STEAM para jóvenes.</p>
+      <span class="tag evento">Evento Internacional</span>
+    </div>
+  </div>
+  <div class="noticia">
+    <div class="fecha"><div class="day">02</div><div class="month">Jul</div></div>
+    <div class="info">
+      <h3>🥇 Primer lugar en Hackathon Educativo Regional</h3>
+      <p>El equipo de tecnología de la IE obtuvo el primer lugar en el hackathon organizado por la UGEL La Libertad con el proyecto "App de Alertas Ambientales".</p>
+      <span class="tag academico">Académico</span>
+    </div>
+  </div>
+  <div class="noticia">
+    <div class="fecha"><div class="day">25</div><div class="month">Jun</div></div>
+    <div class="info">
+      <h3>📅 Calendarización del segundo semestre 2025</h3>
+      <p>La Dirección informa las fechas clave del segundo semestre: inicio de clases 28 de julio, exámenes parciales del 18 al 22 de agosto y clausura el 20 de diciembre.</p>
+      <span class="tag evento">Institucional</span>
+    </div>
+  </div>
+</body>
+</html>

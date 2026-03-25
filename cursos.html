@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Nunito', sans-serif; background: #f0f4ff; padding: 36px; color: #222; }
+    h1 { color: #1a237e; font-size: 26px; font-weight: 800; margin-bottom: 8px; }
+    .sub { color: #666; font-size: 14px; margin-bottom: 28px; }
+    .grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 18px; }
+    .curso {
+      background: white;
+      border-radius: 14px;
+      padding: 22px;
+      box-shadow: 0 2px 10px rgba(57,73,171,0.07);
+      display: flex; gap: 16px; align-items: flex-start;
+      border-left: 5px solid var(--c);
+      transition: transform 0.18s;
+    }
+    .curso:hover { transform: translateY(-3px); }
+    .emoji { font-size: 32px; }
+    .curso h3 { font-size: 15px; color: #1a237e; margin-bottom: 5px; }
+    .curso p { font-size: 13px; color: #555; line-height: 1.5; }
+    .tag { display: inline-block; background: #e8eaf6; color: #3949ab; font-size: 11px; padding: 2px 10px; border-radius: 20px; margin-top: 8px; font-weight: 700; }
+  </style>
+</head>
+<body>
+  <h1>📚 Cursos Disponibles</h1>
+  <p class="sub">Oferta académica del presente año escolar — Nivel Secundaria</p>
+  <div class="grid">
+    <div class="curso" style="--c:#3949ab"><div class="emoji">🔢</div><div><h3>Matemática</h3><p>Álgebra, geometría y estadística aplicada. Desde 1.° hasta 5.° de secundaria.</p><span class="tag">Obligatorio</span></div></div>
+    <div class="curso" style="--c:#00897b"><div class="emoji">🌿</div><div><h3>Ciencia y Tecnología</h3><p>Biología, química, física y proyectos de investigación científica escolar.</p><span class="tag">Obligatorio</span></div></div>
+    <div class="curso" style="--c:#e53935"><div class="emoji">📖</div><div><h3>Comunicación</h3><p>Comprensión lectora, expresión oral y producción de textos argumentativos.</p><span class="tag">Obligatorio</span></div></div>
+    <div class="curso" style="--c:#f57c00"><div class="emoji">🌎</div><div><h3>Ciencias Sociales</h3><p>Historia del Perú, geografía y formación ciudadana democrática.</p><span class="tag">Obligatorio</span></div></div>
+    <div class="curso" style="--c:#6a1b9a"><div class="emoji">💻</div><div><h3>Educación para el Trabajo</h3><p>Computación, ofimática y habilidades digitales para el siglo XXI.</p><span class="tag">Técnico</span></div></div>
+    <div class="curso" style="--c:#2e7d32"><div class="emoji">🤖</div><div><h3>Taller de Robótica</h3><p>Programación con Scratch y Arduino. Proyecto final por equipos.</p><span class="tag">Extracurricular</span></div></div>
+  </div>
+</body>
+</html>
