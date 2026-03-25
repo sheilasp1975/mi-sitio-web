@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=EB+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'EB Garamond', serif; background: #fdf6ee; padding: 36px; color: #2c1a0e; }
+    .hero { background: linear-gradient(135deg, #1a1a2e, #16213e); border-radius: 16px; padding: 40px 32px; color: #c9a84c; margin-bottom: 28px; text-align: center; }
+    .hero h1 { font-family: 'Cinzel', serif; font-size: 26px; margin-bottom: 8px; letter-spacing: 1px; }
+    .hero p { font-size: 15px; color: rgba(201,168,76,0.65); }
+    .grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 18px; }
+    .museo { background: white; border-radius: 14px; overflow: hidden; box-shadow: 0 3px 14px rgba(61,28,2,0.08); transition: transform 0.18s; }
+    .museo:hover { transform: translateY(-3px); }
+    .museo-top { height: 100px; display: flex; align-items: center; justify-content: center; font-size: 52px; }
+    .museo-info { padding: 18px 20px; }
+    .museo-info h3 { font-family: 'Cinzel', serif; color: #3d1c02; font-size: 13px; letter-spacing: 0.5px; margin-bottom: 8px; }
+    .museo-info p { color: #5a3a1a; font-size: 14px; line-height: 1.6; }
+    .museo-info .meta { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 10px; }
+    .meta span { background: #f5e6d0; color: #8b5635; font-size: 11px; padding: 2px 10px; border-radius: 3px; }
+  </style>
+</head>
+<body>
+  <div class="hero">
+    <h1>🏛️ Museos de La Libertad</h1>
+    <p>Guardianes del patrimonio cultural e histórico de la región</p>
+  </div>
+  <div class="grid">
+    <div class="museo">
+      <div class="museo-top" style="background: linear-gradient(135deg,#f5e6d0,#e8c99a);">🏺</div>
+      <div class="museo-info">
+        <h3>Museo de Chan Chan</h3>
+        <p>Exhibe la historia y arquitectura de la ciudadela Chimú. Maquetas, cerámica y textiles originales de la cultura costeña más importante de América.</p>
+        <div class="meta"><span>📍 Huanchaco</span><span>🕒 Mar–Dom 9am–5pm</span><span>S/. 10</span></div>
+      </div>
+    </div>
+    <div class="museo">
+      <div class="museo-top" style="background: linear-gradient(135deg,#d4e6f1,#aed6f1);">🦴</div>
+      <div class="museo-info">
+        <h3>Museo de Arqueología – UNT</h3>
+        <p>Colección arqueológica universitaria con más de 5,000 piezas de culturas Mochica, Chimú e Inca. Ingreso libre con presentación de carnet universitario.</p>
+        <div class="meta"><span>📍 Centro de Trujillo</span><span>🕒 Lun–Vie</span><span>Gratuito</span></div>
+      </div>
+    </div>
+    <div class="museo">
+      <div class="museo-top" style="background: linear-gradient(135deg,#fde8d8,#f5b9a0);">🎭</div>
+      <div class="museo-info">
+        <h3>Museo de Arte Moderno</h3>
+        <p>Exposiciones permanentes e itinerantes de artistas plásticos liberteños. Talleres de pintura, escultura y fotografía para todas las edades.</p>
+        <div class="meta"><span>📍 Av. España</span><span>🕒 Mié–Dom</span><span>S/. 5</span></div>
+      </div>
+    </div>
+    <div class="museo">
+      <div class="museo-top" style="background: linear-gradient(135deg,#d5f5e3,#a9dfbf);">🪆</div>
+      <div class="museo-info">
+        <h3>Casa Urquiaga – Banco Central</h3>
+        <p>Casa colonial del siglo XVIII, sede de importantes decisiones libertarias. Contiene muebles originales y el escritorio donde trabajó Simón Bolívar en 1824.</p>
+        <div class="meta"><span>📍 Plaza Mayor</span><span>🕒 Mar–Dom</span><span>Gratuito</span></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=EB+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'EB Garamond', serif; background: #fdf6ee; padding: 36px; color: #2c1a0e; }
+    .hero { background: linear-gradient(135deg, #5d4037, #a1887f); border-radius: 16px; padding: 40px 32px; color: #fff8e1; margin-bottom: 28px; text-align: center; }
+    .hero h1 { font-family: 'Cinzel', serif; font-size: 26px; margin-bottom: 8px; letter-spacing: 1px; }
+    .hero p { font-size: 15px; color: rgba(255,248,225,0.7); }
+    .grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; }
+    .item { background: white; border-radius: 14px; overflow: hidden; box-shadow: 0 2px 12px rgba(93,64,55,0.08); text-align: center; transition: transform 0.18s; }
+    .item:hover { transform: translateY(-4px); }
+    .item-top { height: 110px; display: flex; align-items: center; justify-content: center; font-size: 52px; }
+    .item-info { padding: 16px; }
+    .item-info h3 { font-family: 'Cinzel', serif; color: #5d4037; font-size: 13px; letter-spacing: 0.5px; margin-bottom: 6px; }
+    .item-info p { color: #6d4c41; font-size: 13px; line-height: 1.6; }
+    .item-info .lugar { display: block; color: #a1887f; font-size: 12px; margin-top: 8px; font-style: italic; }
+    .intro { background: #fff8f0; border: 1px solid #e8c99a; border-radius: 12px; padding: 20px 24px; margin-bottom: 20px; }
+    .intro p { color: #5a3a1a; font-size: 15px; line-height: 1.7; }
+  </style>
+</head>
+<body>
+  <div class="hero">
+    <h1>🪡 Artesanía de La Libertad</h1>
+    <p>Tradiciones milenarias que continúan vivas en las manos de artesanos liberteños</p>
+  </div>
+  <div class="intro">
+    <p>La artesanía de La Libertad es un reflejo directo de las culturas Mochica y Chimú. Los artesanos de hoy preservan técnicas de más de mil años, transmitidas de generación en generación en talleres familiares de toda la región.</p>
+  </div>
+  <div class="grid">
+    <div class="item">
+      <div class="item-top" style="background:linear-gradient(135deg,#f5e6d0,#e8c99a);">🏺</div>
+      <div class="item-info">
+        <h3>Cerámica Mochica</h3>
+        <p>Piezas moldeadas a mano con formas antropomorfas y zoomorfas que reproducen la iconografía Moche.</p>
+        <span class="lugar">📍 Moche y Huanchaco</span>
+      </div>
+    </div>
+    <div class="item">
+      <div class="item-top" style="background:linear-gradient(135deg,#dcedc8,#aed581);">🌾</div>
+      <div class="item-info">
+        <h3>Caballitos de Totora</h3>
+        <p>Embarcaciones artesanales tejidas de junco, usadas por pescadores desde épocas precolombinas en Huanchaco.</p>
+        <span class="lugar">📍 Huanchaco</span>
+      </div>
+    </div>
+    <div class="item">
+      <div class="item-top" style="background:linear-gradient(135deg,#e3f2fd,#90caf9);">🪡</div>
+      <div class="item-info">
+        <h3>Tejidos en Algodón Nativo</h3>
+        <p>Mantas, tapices y prendas tejidas con algodón de colores naturales nativos del norte peruano.</p>
+        <span class="lugar">📍 Magdalena de Cao</span>
+      </div>
+    </div>
+    <div class="item">
+      <div class="item-top" style="background:linear-gradient(135deg,#fff3e0,#ffcc80);">🪵</div>
+      <div class="item-info">
+        <h3>Talla en Madera</h3>
+        <p>Imaginería religiosa y figuras decorativas talladas en madera de cedro y algarrobo por artesanos trujillanos.</p>
+        <span class="lugar">📍 Trujillo</span>
+      </div>
+    </div>
+    <div class="item">
+      <div class="item-top" style="background:linear-gradient(135deg,#fce4ec,#f48fb1);">💍</div>
+      <div class="item-info">
+        <h3>Orfebrería Chimú</h3>
+        <p>Reproducción de piezas de oro y plata basadas en los originales Chimú, trabajadas con técnicas de laminado antiguo.</p>
+        <span class="lugar">📍 Huanchaco y Chan Chan</span>
+      </div>
+    </div>
+    <div class="item">
+      <div class="item-top" style="background:linear-gradient(135deg,#ede7f6,#b39ddb);">🎨</div>
+      <div class="item-info">
+        <h3>Retablos y Pinturas</h3>
+        <p>Arte popular que retrata escenas históricas, costumbres y fiestas patronales de los pueblos liberteños.</p>
+        <span class="lugar">📍 Mercado Artesanal Trujillo</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
